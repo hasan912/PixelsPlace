@@ -5,7 +5,7 @@ import './globals.css'
 import ThemeProvider from '@/components/theme-provider'
 import Footer from '@/components/Footer';
 import Authprovider from '@/components/Authprovider/Authprovider';
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 const inter = Righteous({
   subsets: ["latin"],
   weight: ["400"],
@@ -33,6 +33,7 @@ export default function RootLayout({
             <div className='w-full'>
               <Authprovider>
               {children}
+              <SpeedInsights />
               </Authprovider>
               <Footer /></div>
           </div>
